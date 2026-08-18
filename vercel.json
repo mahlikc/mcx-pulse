@@ -1,0 +1,11 @@
+{
+  "crons": [
+    { "path": "/api/meta-sync", "schedule": "0 10 * * *" },
+    { "path": "/api/shopify-sync", "schedule": "15 10 * * *" },
+    { "path": "/api/shopify-sync?cohorts=1", "schedule": "30 10 1 * *" }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
